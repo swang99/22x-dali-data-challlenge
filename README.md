@@ -1,30 +1,18 @@
-# DALI Data Challenge 22S
+# DALI Data Challenge 22X
 
 ## Part 1 
-Describe the dataset given with three or more data visualizations. These can be maps, histograms, line graphs, 
-combinations of those, or anything else. It can be a time-series, or an interactive plot.
+![Preliminary Data Visualizations](/part-1/store_x_insights.png)
 
-Think, if you could only show someone these graphs to describe most of the data, what graphs would you choose.
-
-Design matters, making this beautiful matters.
-
-The sky is the limit!
-
+The visualizations were produced in the following [notebook](part-1/data_challenge_p1.ipynb).
 
 
 ## Part 2
-Part 2 is more free-form, and allows you to showcase YOUR specific skillset.
+For the data modelling part, I decided showcase some of my machine learning skills. Using the provided sales data, I designed the following three predictive  models using Catboost gradient boosting: 
 
-Here's a chance to showcase your data science skills!
+(1) Given the discount and product ID of a transactions, the first model predicts whether the transaction resulted in a net gain or loss (**~99.8% accuracy**). 
 
-Model this data! Predict some outcome, make some claims, show your work, analyse it statistically, and tell us your thinking all the way through. You can do machine learning, or deep learning or statistical analysis. Whatever interests you, go for it!
+(2) Given the sub-category, U.S. state, and whether a transaction was profitable, the second model predicts the exact discount percentage applied to the transaction (**r-squared of ~0.992**).
 
-Be creative, think big, and report your findings in a clean, clear way!
+(3) Given the postal code, profit, quantity, discount, and shipping time of the transaction, the third model predicts the sub-category of the transaction. This model was a bit more complex, so I used some hyperparameter tuning to ramp up performance. (**~99.6% accuracy**)
 
-Email osman.khan@dali.dartmouth.edu with questions!
-
-
-* Count encoding limitation for product ID: When two products appear the same number of times, they become the same category, so the information distinguishing them is lost. 
-
-* Initial Goal: Predict the product that the customer is most likely to buy given the state and category of the purchase
-* 80-20 train test split: https://en.wikipedia.org/wiki/Pareto_principle
+My full process and model considerations are detailed in the following [notebook](part-2/data_challenge-p2.ipynb). 
