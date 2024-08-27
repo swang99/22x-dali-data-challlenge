@@ -1,4 +1,4 @@
-# DALI Data Challenge 22X
+# Exploring Shopping Data
 
 ## Part 1 
 ![Preliminary Data Visualizations](/part-1/store_x_insights.png)
